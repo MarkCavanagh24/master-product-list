@@ -4,7 +4,7 @@
 
 ### Variable 1:
 **Name:** YOJIN_API_URL
-**Value:** https://yojin.co.uk/api
+**Value:** https://api.hyperzod.app/v1
 
 ### Variable 2:
 **Name:** YOJIN_API_KEY

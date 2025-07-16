@@ -38,6 +38,12 @@ class YojinAPIService {
     for (let attempt = 1; attempt <= this.retryAttempts; attempt++) {
       try {
         const response = await axios(requestConfig);
+        
+        // Check if response is HTML (indicates wrong endpoint)
+        if (typeof response.data === 'string' && response.data.includes('<!DOCTYPE html>')) {
+          throw new Error('API returned HTML page instead of JSON - check endpoint URL');
+        }
+        
         return response.data;
       } catch (error) {
         lastError = error;
