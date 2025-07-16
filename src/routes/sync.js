@@ -21,6 +21,32 @@ router.get('/test-connection', async (req, res) => {
   }
 });
 
+// Debug endpoint to test product creation
+router.post('/debug-product-create', async (req, res) => {
+  try {
+    const { merchantId, productData } = req.body;
+    
+    // Test the actual API call
+    const result = await YojinAPIService.createProduct(merchantId, productData);
+    
+    res.json({
+      success: true,
+      data: {
+        apiResponse: result,
+        productData: productData,
+        merchantId: merchantId,
+        timestamp: new Date().toISOString()
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      stack: error.stack
+    });
+  }
+});
+
 // Get API limits
 router.get('/limits', async (req, res) => {
   try {
