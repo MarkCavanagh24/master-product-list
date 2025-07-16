@@ -1,0 +1,236 @@
+/* Yojin Product Integration Styles */
+/* Add this to your yojin.co.uk store CSS */
+
+.yojin-product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.yojin-product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 0 0 8px 0;
+}
+
+.product-category {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.add-to-cart-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+    background: #2980b9;
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.98);
+}
+
+/* Product Grid Layout */
+.yojin-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Search Widget Styles */
+.yojin-search-widget {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.yojin-search-widget input,
+.yojin-search-widget select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    min-width: 200px;
+}
+
+.yojin-search-widget button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.yojin-search-widget button:hover {
+    background: #219a52;
+}
+
+/* Loading and Error States */
+.yojin-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.yojin-error {
+    background: #fee;
+    border: 1px solid #fcc;
+    color: #c66;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+}
+
+.yojin-success {
+    background: #efe;
+    border: 1px solid #cfc;
+    color: #6c6;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .yojin-products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .yojin-search-widget {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .yojin-search-widget input,
+    .yojin-search-widget select {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* Category Filter Styles */
+.yojin-category-nav {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.yojin-category-btn {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #2c3e50;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.yojin-category-btn:hover,
+.yojin-category-btn.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Pagination Styles */
+.yojin-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+}
+
+.yojin-pagination button {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #2c3e50;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.yojin-pagination button:hover {
+    background: #d5dbdb;
+}
+
+.yojin-pagination button.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.yojin-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

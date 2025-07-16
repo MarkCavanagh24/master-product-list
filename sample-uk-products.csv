@@ -1,0 +1,51 @@
+SKU,Name,Description,Price,Cost Price,Category,Brand,Weight,Dimensions,Image URL,Tags,Is Active
+UK001,Coca-Cola Classic 330ml,Refreshing cola soft drink in 330ml can,1.25,0.65,Beverages,Coca-Cola,0.33,6.5x6.5x12.2,https://example.com/images/coke-330ml.jpg,soft drink cola refreshing,1
+UK002,Walker's Ready Salted Crisps 32.5g,Classic ready salted potato crisps,1.00,0.45,Snacks,Walker's,0.033,18x13x6,https://example.com/images/walkers-ready-salted.jpg,crisps snacks potato,1
+UK003,Cadbury Dairy Milk 110g,Creamy milk chocolate bar,2.50,1.25,Confectionery,Cadbury,0.11,19x10x1,https://example.com/images/dairy-milk-110g.jpg,chocolate milk sweet,1
+UK004,Tesco White Bread 800g,Fresh white sliced bread loaf,1.20,0.60,Bakery,Tesco,0.8,25x12x8,https://example.com/images/white-bread-800g.jpg,bread bakery white sliced,1
+UK005,Fresh Bananas per kg,Fresh yellow bananas sold per kilogram,1.85,0.95,Fresh Produce,Fresh,1.0,variable,https://example.com/images/bananas-kg.jpg,fruit fresh healthy,1
+UK006,Red Bull Energy Drink 250ml,Energy drink with caffeine and taurine,2.75,1.35,Beverages,Red Bull,0.25,5.3x5.3x17.1,https://example.com/images/redbull-250ml.jpg,energy drink caffeine,1
+UK007,Kellogg's Corn Flakes 500g,Crunchy corn flakes breakfast cereal,3.50,1.75,Breakfast,Kellogg's,0.5,30x20x8,https://example.com/images/cornflakes-500g.jpg,cereal breakfast corn,1
+UK008,Heinz Baked Beans 415g,Baked beans in tomato sauce,1.15,0.55,Canned Goods,Heinz,0.415,10.5x7.5x10.8,https://example.com/images/baked-beans-415g.jpg,beans canned tomato,1
+UK009,PG Tips Tea Bags 80 Pack,Traditional English breakfast tea bags,4.25,2.15,Beverages,PG Tips,0.25,15x10x8,https://example.com/images/pg-tips-80.jpg,tea breakfast english,1
+UK010,Nescafe Gold Instant Coffee 200g,Premium instant coffee granules,6.50,3.25,Beverages,Nescafe,0.2,12x8x16,https://example.com/images/nescafe-gold-200g.jpg,coffee instant premium,1
+UK011,Hovis Wholemeal Bread 800g,Nutritious wholemeal sliced bread,1.45,0.70,Bakery,Hovis,0.8,25x12x8,https://example.com/images/hovis-wholemeal.jpg,bread wholemeal healthy,1
+UK012,Andrex Toilet Tissue 9 Roll,Soft and strong toilet tissue pack,8.50,4.25,Household,Andrex,2.5,30x20x25,https://example.com/images/andrex-9roll.jpg,toilet tissue household,1
+UK013,Fairy Washing Up Liquid 500ml,Concentrated washing up liquid,2.25,1.10,Household,Fairy,0.5,8x6x20,https://example.com/images/fairy-500ml.jpg,washing liquid cleaning,1
+UK014,McVitie's Digestive Biscuits 400g,Classic wheat digestive biscuits,2.00,1.00,Biscuits,McVitie's,0.4,20x15x5,https://example.com/images/digestives-400g.jpg,biscuits digestive wheat,1
+UK015,Mars Bar 51g,Caramel and nougat chocolate bar,1.35,0.70,Confectionery,Mars,0.051,11x2x2,https://example.com/images/mars-bar-51g.jpg,chocolate caramel nougat,1
+UK016,Lucozade Original 380ml,Glucose energy drink original flavour,1.85,0.95,Beverages,Lucozade,0.38,6x6x22,https://example.com/images/lucozade-380ml.jpg,energy glucose drink,1
+UK017,Warburtons Crumpets 6 Pack,Soft and fluffy crumpets ready to toast,1.75,0.85,Bakery,Warburtons,0.3,18x12x4,https://example.com/images/crumpets-6pack.jpg,crumpets toast bakery,1
+UK018,Richmond Sausages 8 Pack,Pork sausages in natural casing,3.25,1.65,Meat,Richmond,0.45,20x15x3,https://example.com/images/richmond-sausages.jpg,sausages pork meat,1
+UK019,Cathedral City Mature Cheddar 200g,Mature cheddar cheese block,3.75,1.90,Dairy,Cathedral City,0.2,12x8x4,https://example.com/images/cheddar-200g.jpg,cheese cheddar mature,1
+UK020,Persil Non-Bio Powder 40 Wash,Non-biological washing powder,12.50,6.25,Household,Persil,2.6,25x18x12,https://example.com/images/persil-40wash.jpg,washing powder laundry,1
+UK021,Müller Corner Strawberry Yogurt,Creamy yogurt with strawberry pieces,0.85,0.42,Dairy,Müller,0.15,8x8x6,https://example.com/images/muller-strawberry.jpg,yogurt strawberry dairy,1
+UK022,Monster Energy Drink 500ml,High caffeine energy drink,2.99,1.50,Beverages,Monster,0.5,6.6x6.6x17.8,https://example.com/images/monster-500ml.jpg,energy drink caffeine,1
+UK023,Jacob's Cream Crackers 200g,Traditional cream crackers for cheese,1.50,0.75,Biscuits,Jacob's,0.2,18x12x3,https://example.com/images/cream-crackers.jpg,crackers cheese traditional,1
+UK024,Innocent Smoothie Orange 250ml,Pure fruit smoothie with no added sugar,2.25,1.15,Beverages,Innocent,0.25,6x6x15,https://example.com/images/innocent-orange.jpg,smoothie fruit healthy,1
+UK025,Pringles Original 165g,Stackable potato crisps original flavour,2.75,1.40,Snacks,Pringles,0.165,9x9x24,https://example.com/images/pringles-original.jpg,crisps stackable potato,1
+UK026,Ben & Jerry's Cookie Dough 465ml,Premium ice cream with cookie dough pieces,5.50,2.75,Frozen,Ben & Jerry's,0.465,12x12x10,https://example.com/images/ben-jerry-cookie.jpg,ice cream premium frozen,1
+UK027,Weetabix Original 24 Biscuits,Wholegrain wheat breakfast biscuits,3.25,1.65,Breakfast,Weetabix,0.43,25x18x6,https://example.com/images/weetabix-24.jpg,cereal wheat breakfast,1
+UK028,Tetley Tea Bags 160 Pack,Quality black tea bags for everyday brewing,5.50,2.75,Beverages,Tetley,0.32,18x12x10,https://example.com/images/tetley-160.jpg,tea black everyday,1
+UK029,Lurpak Spreadable Butter 500g,Danish spreadable butter blend,4.75,2.40,Dairy,Lurpak,0.5,15x10x5,https://example.com/images/lurpak-500g.jpg,butter spreadable danish,1
+UK030,Haribo Starmix 140g,Mixed fruit flavoured gummy sweets,1.25,0.65,Confectionery,Haribo,0.14,15x10x3,https://example.com/images/haribo-starmix.jpg,sweets gummy fruit,1
+UK031,Tropicana Orange Juice 950ml,Pure premium orange juice not from concentrate,3.25,1.65,Beverages,Tropicana,0.95,8x8x24,https://example.com/images/tropicana-950ml.jpg,orange juice premium,1
+UK032,Philadelphia Cream Cheese 280g,Smooth and creamy soft cheese spread,2.75,1.40,Dairy,Philadelphia,0.28,12x8x5,https://example.com/images/philadelphia-280g.jpg,cheese cream spread,1
+UK033,Dove Original Beauty Bar 90g,Moisturising beauty bar with ¼ moisturising cream,1.85,0.95,Personal Care,Dove,0.09,10x6x3,https://example.com/images/dove-bar-90g.jpg,soap beauty moisturising,1
+UK034,Head & Shoulders Shampoo 400ml,Anti-dandruff shampoo for daily use,4.50,2.25,Personal Care,Head & Shoulders,0.4,8x6x20,https://example.com/images/head-shoulders-400ml.jpg,shampoo dandruff hair,1
+UK035,Colgate Total Toothpaste 125ml,Advanced formula toothpaste for complete care,3.25,1.65,Personal Care,Colgate,0.125,18x4x4,https://example.com/images/colgate-125ml.jpg,toothpaste dental care,1
+UK036,Always Ultra Pads 14 Pack,Ultra thin sanitary pads with wings,4.25,2.15,Personal Care,Always,0.2,25x15x8,https://example.com/images/always-ultra-14.jpg,sanitary pads feminine,1
+UK037,Gillette Fusion Razors 4 Pack,Premium men's razors with 5 blade technology,15.50,7.75,Personal Care,Gillette,0.15,18x12x3,https://example.com/images/gillette-fusion-4.jpg,razors shaving men,1
+UK038,L'Oreal Paris Shampoo 400ml,Elvive total repair 5 damage-erasing shampoo,5.25,2.65,Personal Care,L'Oreal,0.4,8x6x20,https://example.com/images/loreal-400ml.jpg,shampoo repair hair,1
+UK039,Paracetamol Tablets 16 Pack,Pain relief tablets 500mg paracetamol,1.99,1.00,Health,Generic,0.05,12x8x2,https://example.com/images/paracetamol-16.jpg,paracetamol pain relief,1
+UK040,Ibuprofen Tablets 16 Pack,Anti-inflammatory pain relief 200mg tablets,2.49,1.25,Health,Generic,0.05,12x8x2,https://example.com/images/ibuprofen-16.jpg,ibuprofen anti-inflammatory,1
+UK041,Kleenex Tissues 70 Pack,Soft facial tissues in convenient box,2.25,1.15,Household,Kleenex,0.3,23x12x11,https://example.com/images/kleenex-70.jpg,tissues facial soft,1
+UK042,Comfort Fabric Conditioner 1.26L,Concentrated fabric conditioner blue skies,4.75,2.40,Household,Comfort,1.26,12x8x28,https://example.com/images/comfort-1.26l.jpg,fabric conditioner laundry,1
+UK043,Mr Muscle Oven Cleaner 300ml,Heavy duty oven and grill cleaner spray,3.99,2.00,Household,Mr Muscle,0.3,6x6x22,https://example.com/images/mr-muscle-300ml.jpg,oven cleaner spray,1
+UK044,Dettol Disinfectant Spray 400ml,All-in-one disinfectant spray kills 99.9% germs,4.50,2.25,Household,Dettol,0.4,6x6x25,https://example.com/images/dettol-400ml.jpg,disinfectant spray cleaning,1
+UK045,Duracell AA Batteries 8 Pack,Long-lasting alkaline AA batteries,8.99,4.50,Household,Duracell,0.24,15x10x3,https://example.com/images/duracell-aa-8.jpg,batteries alkaline power,1
+UK046,Flash All Purpose Cleaner 1L,Lemon scented multi-surface cleaner,3.25,1.65,Household,Flash,1.0,10x8x26,https://example.com/images/flash-1l.jpg,cleaner multi-surface lemon,1
+UK047,Ariel Washing Pods 38 Wash,3-in-1 washing capsules for brilliant cleaning,12.99,6.50,Household,Ariel,1.2,20x15x12,https://example.com/images/ariel-pods-38.jpg,washing pods capsules,1
+UK048,Vanish Stain Remover 500ml,Oxi action stain remover for colours,4.75,2.40,Household,Vanish,0.5,8x6x22,https://example.com/images/vanish-500ml.jpg,stain remover oxi,1
+UK049,Febreze Air Freshener 300ml,3Volution air freshener continuous fragrance,5.99,3.00,Household,Febreze,0.3,6x6x20,https://example.com/images/febreze-300ml.jpg,air freshener fragrance,1
+UK050,Cillit Bang Limescale 750ml,Powerful limescale and grime remover,4.25,2.15,Household,Cillit Bang,0.75,8x8x26,https://example.com/images/cillit-bang-750ml.jpg,limescale cleaner bathroom,1

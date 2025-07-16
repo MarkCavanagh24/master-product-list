@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yojin Harrogate - Local Supermarket</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background: #fff;
+            color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .category-nav a {
+            color: #666;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .category-nav a:hover {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .main-content {
+            padding: 30px 0;
+        }
+
+        .store-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .product-brand {
+            background: #e8f5e8;
+            color: #4CAF50;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #45a049;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .pagination button {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .pagination button.active {
+            background: #4CAF50;
+            color: white;
+            border-color: #4CAF50;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .search-results-info {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Yojin Harrogate</div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button onclick="performSearch()">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="category-nav" id="category-nav">
+                    <a href="#" onclick="loadAllProducts()">All Products</a>
+                    <!-- Categories will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="store-info" id="store-info">
+                <h2>Welcome to Your Local Supermarket</h2>
+                <p>Fresh products delivered to your community in Harrogate</p>
+            </div>
+
+            <div class="search-results-info" id="search-results-info" style="display: none;"></div>
+
+            <div id="loading" class="loading">Loading products...</div>
+            <div id="error" class="error" style="display: none;"></div>
+
+            <div id="products-container" class="products-grid"></div>
+
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </main>
+
+    <script>
+        // Store Configuration - This would be unique for each store
+        const STORE_CONFIG = {
+            storeId: '6804ed7e609167bd23094bb3', // Yojin Harrogate ID from your CSV
+            apiBase: 'http://localhost:8080/api/v1', // Change to your live domain
+            storeName: 'Yojin Harrogate'
+        };
+
+        let currentPage = 1;
+        let currentFilters = {};
+
+        // API Functions
+        async function apiCall(endpoint) {
+            try {
+                const response = await fetch(`${STORE_CONFIG.apiBase}${endpoint}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return await response.json();
+            } catch (error) {
+                console.error('API call failed:', error);
+                showError('Failed to load data. Please try again.');
+                throw error;
+            }
+        }
+
+        async function loadProducts(page = 1, filters = {}) {
+            showLoading();
+            
+            try {
+                let endpoint = `/products?merchant_id=${STORE_CONFIG.storeId}&page=${page}&limit=12`;
+                
+                if (filters.category) endpoint += `&category=${encodeURIComponent(filters.category)}`;
+                if (filters.search) endpoint += `&search=${encodeURIComponent(filters.search)}`;
+                if (filters.sort) endpoint += `&sort=${filters.sort}`;
+                if (filters.order) endpoint += `&order=${filters.order}`;
+
+                const data = await apiCall(endpoint);
+                
+                if (data.success) {
+                    displayProducts(data.data.products);
+                    setupPagination(data.data.pagination);
+                    updateStoreInfo(data.data.merchant);
+                    
+                    // Update search results info
+                    if (filters.search) {
+                        document.getElementById('search-results-info').style.display = 'block';
+                        document.getElementById('search-results-info').textContent = 
+                            `Found ${data.data.pagination.total_items} products for "${filters.search}"`;
+                    } else {
+                        document.getElementById('search-results-info').style.display = 'none';
+                    }
+                }
+                
+                hideLoading();
+            } catch (error) {
+                hideLoading();
+            }
+        }
+
+        async function loadCategories() {
+            try {
+                const data = await apiCall(`/categories?merchant_id=${STORE_CONFIG.storeId}`);
+                
+                if (data.success) {
+                    const nav = document.getElementById('category-nav');
+                    const categoriesHTML = ['<a href="#" onclick="loadAllProducts()">All Products</a>']
+                        .concat(data.data.categories.map(category => 
+                            `<a href="#" onclick="filterByCategory('${category}')">${category}</a>`
+                        )).join('');
+                    nav.innerHTML = categoriesHTML;
+                }
+            } catch (error) {
+                console.error('Failed to load categories');
+            }
+        }
+
+        // Display Functions
+        function displayProducts(products) {
+            const container = document.getElementById('products-container');
+            
+            if (products.length === 0) {
+                container.innerHTML = '<div class="loading">No products found</div>';
+                return;
+            }
+
+            const productsHTML = products.map(product => `
+                <div class="product-card" data-sku="${product.sku}">
+                    <img src="${product.image_url || 'https://via.placeholder.com/300x200?text=No+Image'}" 
+                         alt="${product.name}" class="product-image"
+                         onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-details">
+                        <div class="product-price">£${product.price.toFixed(2)}</div>
+                        <div class="product-brand">${product.brand}</div>
+                    </div>
+                    <button onclick="addToCart('${product.sku}')" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </div>
+            `).join('');
+            
+            container.innerHTML = productsHTML;
+        }
+
+        function setupPagination(pagination) {
+            const container = document.getElementById('pagination');
+            
+            if (pagination.total_pages <= 1) {
+                container.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+            
+            // Previous button
+            if (pagination.has_prev) {
+                paginationHTML += `<button onclick="changePage(${pagination.page - 1})">← Previous</button>`;
+            }
+            
+            // Page numbers
+            const startPage = Math.max(1, pagination.page - 2);
+            const endPage = Math.min(pagination.total_pages, pagination.page + 2);
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const activeClass = i === pagination.page ? 'active' : '';
+                paginationHTML += `<button class="${activeClass}" onclick="changePage(${i})">${i}</button>`;
+            }
+            
+            // Next button
+            if (pagination.has_next) {
+                paginationHTML += `<button onclick="changePage(${pagination.page + 1})">Next →</button>`;
+            }
+            
+            container.innerHTML = paginationHTML;
+        }
+
+        function updateStoreInfo(merchant) {
+            const storeInfo = document.getElementById('store-info');
+            storeInfo.innerHTML = `
+                <h2>Welcome to ${merchant.name}</h2>
+                <p>Fresh products delivered to your community in Harrogate, HG1 5LA</p>
+                <p><strong>Store ID:</strong> ${merchant.id}</p>
+            `;
+        }
+
+        // User Interaction Functions
+        function loadAllProducts() {
+            currentPage = 1;
+            currentFilters = {};
+            loadProducts(currentPage, currentFilters);
+        }
+
+        function filterByCategory(category) {
+            currentPage = 1;
+            currentFilters = { category };
+            loadProducts(currentPage, currentFilters);
+        }
+
+        function performSearch() {
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                currentPage = 1;
+                currentFilters = { search: query };
+                loadProducts(currentPage, currentFilters);
+            } else {
+                loadAllProducts();
+            }
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            loadProducts(currentPage, currentFilters);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Cart functionality (placeholder)
+        function addToCart(sku) {
+            alert(`Added product ${sku} to cart! (This would integrate with your cart system)`);
+        }
+
+        // Utility Functions
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('products-container').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('products-container').style.display = 'grid';
+        }
+
+        function showError(message) {
+            document.getElementById('error').textContent = message;
+            document.getElementById('error').style.display = 'block';
+        }
+
+        // Search on Enter key
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Initialize store on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing store:', STORE_CONFIG.storeName);
+            loadProducts();
+            loadCategories();
+        });
+    </script>
+</body>
+</html>
