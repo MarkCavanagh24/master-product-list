@@ -15,8 +15,8 @@ class YojinAPIService {
     const url = `${this.baseURL}${endpoint}`;
     const headers = {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${this.apiKey}`,
-      'X-Tenant': this.tenant,
+      'X-API-Key': this.apiKey,
+      'X-Tenant-ID': this.tenant,
     };
 
     if (merchantId) {
