@@ -54,6 +54,24 @@ router.post('/sync-all', async (req, res) => {
   }
 });
 
+// Sync all products to specific merchant
+router.post('/sync-merchant/:merchantId', async (req, res) => {
+  try {
+    const merchantId = req.params.merchantId;
+    const result = await ProductSyncService.syncAllProductsToMerchant(merchantId);
+    
+    res.json({
+      success: true,
+      data: result
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Get sync job status
 router.get('/sync-jobs/:id', async (req, res) => {
   try {

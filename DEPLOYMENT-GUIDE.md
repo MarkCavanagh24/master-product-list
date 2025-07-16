@@ -69,8 +69,8 @@ npm install --production
 npm start
 
 # Test endpoints
-curl http://localhost:8080/api/v1/health
-curl "http://localhost:8080/api/v1/products?merchant_id=6804ed7e609167bd23094bb3"
+curl https://web-production-53d80.up.railway.app/api/v1/health
+curl "https://web-production-53d80.up.railway.app/api/v1/products?merchant_id=6804ed7e609167bd23094bb3"
 ```
 
 ## 🏪 Store Integration After Deployment
@@ -79,7 +79,7 @@ curl "http://localhost:8080/api/v1/products?merchant_id=6804ed7e609167bd23094bb3
 Once deployed, update all 991 store config files with your production URL:
 
 **Find & Replace in all store config files:**
-- **FROM**: `http://localhost:8080`
+- **FROM**: `https://web-production-53d80.up.railway.app`
 - **TO**: `https://your-product-api.herokuapp.com`
 
 ### 2. Test with Harrogate Store
